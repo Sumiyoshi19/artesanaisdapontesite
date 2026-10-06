@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artesanais da Ponte — Sabor que conecta pessoas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="logo-area">
+    <!-- LOGO: salve a imagem como logo.png na mesma pasta -->
+    <img src="logo.png" alt="Artesanais da Ponte" class="logo-img">
+    <div class="logo-texto">Artesanais da Ponte</div>
+  </div>
+  <button id="btn-carrinho" title="Abrir carrinho">🛒<span id="badge-carrinho">0</span></button>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-conteudo">
+    <div class="hero-selo">🔥 Forno a lenha · 🌾 Fermentação natural</div>
+    <h1>Sabor que <span class="destaque">conecta pessoas</span></h1>
+    <p>Pães, bolos e delícias feitos à mão, com forno a lenha, fermentação natural e muito carinho em cada receita.</p>
+    <div class="hero-botoes">
+      <a href="#catalogo" class="btn">Ver catálogo</a>
+      <a href="#historia" class="btn btn-ghost">Nossa história</a>
+    </div>
+    <div class="hero-numeros">
+      <div><strong>6</strong><span>anos de história</span></div>
+      <div><strong>300+</strong><span>clientes atendidos</span></div>
+      <div><strong>100%</strong><span>artesanal</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NOSSA HISTÓRIA ================= -->
+<section id="historia">
+  <h2 class="revelar">Nossa História</h2>
+  <div class="historia-blob revelar">
+    <p>Estamos há <strong>6 anos no mercado</strong>, com mais de <strong>300 clientes</strong> atendidos. Na Artesanais da Ponte, cada receita é preparada com carinho, tradição e muito sabor. ❤️</p>
+    <p>Do forno a lenha sai aquele aroma irresistível de produção artesanal, e a fermentação natural garante mais tempo, cuidado e qualidade em cada produto — com opções <strong>sem glúten, sem lactose e sem açúcar</strong> para atender todas as necessidades.</p>
+  </div>
+</section>
+
+<!-- ================= CATÁLOGO ================= -->
+<section id="catalogo">
+  <h2 class="revelar">Nosso Catálogo</h2>
+  <div class="filtros revelar" id="filtros"></div>
+  <div class="grid-produtos" id="grid-produtos"></div>
+</section>
+
+<!-- ================= AVALIAÇÕES ================= -->
+<section id="avaliacoes">
+  <h2 class="revelar">O que dizem sobre nós</h2>
+  <p class="subtitulo revelar">Feedbacks reais de quem já provou 💬</p>
+  <div class="carrossel revelar">
+    <button class="seta esq" id="seta-esq">‹</button>
+    <div class="slides" id="slides"></div>
+    <button class="seta dir" id="seta-dir">›</button>
+  </div>
+  <div class="bolinhas" id="bolinhas"></div>
+</section>
+
+<!-- ================= RODAPÉ ================= -->
+<footer>
+  <img src="logo.png" alt="Artesanais da Ponte" class="logo-rodape">
+  <div class="cursiva">Artesanais da Ponte</div>
+  <p>Sabor que conecta pessoas · Encomendas pelo WhatsApp</p>
+</footer>
+
+<!-- ================= CARRINHO ================= -->
+<div id="overlay"></div>
+<aside id="sidebar">
+  <button id="btn-fechar">✕</button>
+  <h2>Seu Pedido</h2>
+  <div id="lista-carrinho"></div>
+  <div id="total"></div>
+  <button class="btn" id="btn-comprar">Comprar pelo WhatsApp</button>
+</aside>
+
+<!-- ================= MODAL DE SABORES ================= -->
+<div id="modal">
+  <div class="modal-caixa">
+    <button id="modal-fechar">✕</button>
+    <div class="foto-modal" id="modal-foto"></div>
+    <h3 id="modal-nome"></h3>
+    <div class="preco-modal" id="modal-preco"></div>
+    <div class="titulo-sabores">Escolha o sabor:</div>
+    <div class="chips-sabores" id="chips-sabores"></div>
+    <button class="btn" id="btn-modal-add" disabled>Adicionar ao carrinho</button>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
